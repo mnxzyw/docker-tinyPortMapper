@@ -21,9 +21,11 @@ ENV LOCAL_ADDR 0.0.0.0:4097
 ENV REMOTE_ADDR 127.0.0.1:4096
 ENV ARGS -t -u
 ENV SOCKET_BUF 10240
+ENV LOG_LEVEL 3
 
 CMD exec tinymapper_amd64 \
     $ARGS \
     -l $LOCAL_ADDR \
     -r $REMOTE_ADDR \
-    --sock-buf $SOCKET_BUF
+    --sock-buf $SOCKET_BUF \
+    --log-level $LOG_LEVEL
