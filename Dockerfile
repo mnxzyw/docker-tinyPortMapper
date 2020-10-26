@@ -6,9 +6,9 @@ RUN apt-get update \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
-ARG MAPPER_VERSION=20180224.0
+# ARG MAPPER_VERSION=20180224.0
 WORKDIR /app
-RUN wget https://github.com/wangyu-/tinyPortMapper/releases/download/$MAPPER_VERSION/tinymapper_binaries.tar.gz \
+RUN wget https://github.com/wangyu-/tinyPortMapper/releases/latest/download/tinymapper_binaries.tar.gz \
   && tar -xzvf tinymapper_binaries.tar.gz
 
 
